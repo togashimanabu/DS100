@@ -1,11 +1,11 @@
 ﻿/**************************************************
 データサイエンス100本ノック（構造化データ加工編） - SQL
+SQL Server 2017 版
 
 https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess/blob/master/docker/work/answer/ans_preprocess_knock_SQL.ipynb
 
-
 ****************************************************/
-use crm
+use ds100
 ;
 -- customer
 DROP TABLE IF EXISTS customer
@@ -106,7 +106,7 @@ truncate TABLE customer
 BULK
 INSERT customer
 FROM
-     'D:\BeaconCRM\SAS_DATA\rawdata\WORK\customer.csv' WITH(
+     'D:\tmp\ds100\customer.csv' WITH(
          FIRSTROW = 2
         ,DATAFILETYPE = 'char'
         ,CODEPAGE = '65001'
@@ -120,7 +120,7 @@ truncate TABLE category
 BULK
 INSERT category
 FROM
-     'D:\BeaconCRM\SAS_DATA\rawdata\WORK\category.csv' WITH(
+     'D:\tmp\ds100\category.csv' WITH(
          FIRSTROW = 2
         ,DATAFILETYPE = 'char'
         ,CODEPAGE = '65001'
@@ -134,7 +134,7 @@ truncate TABLE product
 BULK
 INSERT product
 FROM
-     'D:\BeaconCRM\SAS_DATA\rawdata\WORK\product.csv' WITH(
+     'D:\tmp\ds100\product.csv' WITH(
          FIRSTROW = 2
         ,DATAFILETYPE = 'char'
         ,CODEPAGE = '65001'
@@ -148,7 +148,7 @@ truncate TABLE store
 BULK
 INSERT store
 FROM
-     'D:\BeaconCRM\SAS_DATA\rawdata\WORK\store.csv' WITH(
+     'D:\tmp\ds100\store.csv' WITH(
          FIRSTROW = 2
         ,DATAFILETYPE = 'char'
         ,CODEPAGE = '65001'
@@ -162,7 +162,7 @@ truncate TABLE receipt
 BULK
 INSERT receipt
 FROM
-     'D:\BeaconCRM\SAS_DATA\rawdata\WORK\receipt.csv' WITH(
+     'D:\tmp\ds100\receipt.csv' WITH(
          FIRSTROW = 2
         ,DATAFILETYPE = 'char'
         ,CODEPAGE = '65001'
@@ -176,7 +176,7 @@ truncate TABLE geocode
 BULK
 INSERT geocode
 FROM
-     'D:\BeaconCRM\SAS_DATA\rawdata\WORK\geocode.csv' WITH(
+     'D:\tmp\ds100\geocode.csv' WITH(
          FIRSTROW = 2
         ,DATAFILETYPE = 'char'
         ,CODEPAGE = '65001'
