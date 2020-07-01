@@ -3,6 +3,7 @@
 SQL Server 2017 版
 
 https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess/blob/master/docker/work/answer/ans_preprocess_knock_SQL.ipynb
+
 ****************************************************/
 use ds100
 ;
